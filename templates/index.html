@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMURAI Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Google  Fontsの読み込み -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('index') }}">SAMURAI Chat</a>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>質問</h2>
+                <form action="{{ url_for('index') }}" method="post">
+                    <div>
+                        <textarea name="question" cols="60" rows="6" maxlength="300" required>{{ old_question }}</textarea>
+                    </div>
+                    <div class="submit-btn">
+                        <button type="submit" name="submit" value="ask">質問する</button>
+                    </div>    
+                </form>
+            </section>
+            <section>
+                <h2>回答</h2>
+                <p>
+                    {% if error_message %}
+                        <span style="color: red;">{{ error_message }}</span>
+                    {% elif answer %}
+                        {{ answer }}
+                    {% else %}
+                        質問内容を入力して「質問する」ボタンをクリックすると、ここに回答が表示されます。
+                    {% endif %}
+                </p>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <p class="copyright">&copy; SAMURAI Chat All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

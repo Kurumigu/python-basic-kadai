@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #111;
+}
+
+header {
+    height: 4rem;
+    background-color: #e2001b;
+}
+
+nav {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 4rem;
+}
+
+nav a {
+    margin-left: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+main{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+article {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 8rem);
+    padding: 1.75rem 0.75rem 2.75rem;
+}
+
+h2 {
+    text-align: left;
+    font-size: 1.25rem;
+}
+
+p {
+    text-align: left;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    text-align: right;
+}
+
+button {
+    padding:0.5rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    background-color: #e2001b;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 1px 2px 4px rgb(0 0 0 / 15%);
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+footer{
+    height: 4rem;
+    background-color: #fafafa;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 4rem;
+    color: #555;
+    text-align: center;
+}
